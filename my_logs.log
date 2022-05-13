@@ -91,3 +91,160 @@ I, [2022-05-09T13:24:00.243662 #16568]  INFO -- : Response is: {"code":200,"type
 I, [2022-05-09T13:24:00.246640 #16568]  INFO -- : URL: https://petstore.swagger.io/v2/store/order/7
 I, [2022-05-09T13:24:00.863776 #16568]  INFO -- : Response is: {"code":1,"type":"error","message":"Order not found"}
 I, [2022-05-09T13:24:00.866082 #16568]  INFO -- : ----- Test Case finish -----
+I, [2022-05-11T21:46:44.203433 #9800]  INFO -- : ----- Test Case start -----
+I, [2022-05-11T21:46:44.203892 #9800]  INFO -- : URL: https://petstore.swagger.io/v2/pet/findByStatus?status=pending
+I, [2022-05-11T21:46:44.836048 #9800]  INFO -- : ----- Test Case finish -----
+I, [2022-05-11T21:46:44.842936 #9800]  INFO -- : ----- Test Case start -----
+I, [2022-05-11T21:46:44.843295 #9800]  INFO -- : URL: https://petstore.swagger.io/v2/pet
+I, [2022-05-11T21:46:44.843660 #9800]  INFO -- : POST request is: {"id":"","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:46:45.447590 #9800]  INFO -- : Response is: {"id":9223372036854024358,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:46:45.450642 #9800]  INFO -- : URL: https://petstore.swagger.io/v2/pet/9223372036854024358
+I, [2022-05-11T21:46:46.069615 #9800]  INFO -- : Response is: {"id":9223372036854024358,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:46:46.071595 #9800]  INFO -- : ----- Test Case finish -----
+I, [2022-05-11T21:46:46.076788 #9800]  INFO -- : ----- Test Case start -----
+I, [2022-05-11T21:46:46.077110 #9800]  INFO -- : URL: https://petstore.swagger.io/v2/store/order
+I, [2022-05-11T21:46:46.077448 #9800]  INFO -- : POST request is: {"id":"9","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:46:46.691783 #9800]  INFO -- : Response is: {"id":9,"petId":0,"quantity":0,"status":"available","complete":false}
+I, [2022-05-11T21:46:46.695005 #9800]  INFO -- : URL: https://petstore.swagger.io/v2/store/order/9
+I, [2022-05-11T21:46:47.315122 #9800]  INFO -- : Response is: {"id":9,"petId":0,"quantity":0,"status":"available","complete":false}
+I, [2022-05-11T21:46:47.317319 #9800]  INFO -- : ----- Test Case finish -----
+I, [2022-05-11T21:46:47.322108 #9800]  INFO -- : ----- Test Case start -----
+I, [2022-05-11T21:46:47.322314 #9800]  INFO -- : URL: https://petstore.swagger.io/v2/pet
+I, [2022-05-11T21:46:47.322509 #9800]  INFO -- : POST request is: {"id":"9","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:46:47.940510 #9800]  INFO -- : Response is: {"id":9,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:46:47.943797 #9800]  INFO -- : URL: https://petstore.swagger.io/v2/pet
+I, [2022-05-11T21:46:47.944195 #9800]  INFO -- : PUT request is: {"id":"9","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"sold"}
+I, [2022-05-11T21:46:48.563368 #9800]  INFO -- : Response is: {"id":9,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"sold"}
+I, [2022-05-11T21:46:48.566022 #9800]  INFO -- : URL: https://petstore.swagger.io/v2/pet/9
+I, [2022-05-11T21:46:49.186969 #9800]  INFO -- : Response is: {"id":9,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"sold"}
+I, [2022-05-11T21:46:49.190569 #9800]  INFO -- : ----- Test Case finish -----
+I, [2022-05-11T21:46:49.195646 #9800]  INFO -- : ----- Test Case start -----
+I, [2022-05-11T21:46:49.195947 #9800]  INFO -- : URL: https://petstore.swagger.io/v2/pet
+I, [2022-05-11T21:46:49.196149 #9800]  INFO -- : POST request is: {"id":"9","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:46:49.810717 #9800]  INFO -- : Response is: {"id":9,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:46:49.814064 #9800]  INFO -- : URL: https://petstore.swagger.io/v2/pet/9
+I, [2022-05-11T21:46:50.434662 #9800]  INFO -- : Response is: {"code":200,"type":"unknown","message":"9"}
+I, [2022-05-11T21:46:50.437557 #9800]  INFO -- : URL: https://petstore.swagger.io/v2/pet/9
+I, [2022-05-11T21:46:51.043185 #9800]  INFO -- : Response is: {"code":1,"type":"error","message":"Pet not found"}
+I, [2022-05-11T21:46:51.045039 #9800]  INFO -- : ----- Test Case finish -----
+I, [2022-05-11T21:46:51.050010 #9800]  INFO -- : ----- Test Case start -----
+I, [2022-05-11T21:46:51.050326 #9800]  INFO -- : URL: https://petstore.swagger.io/v2/store/order
+I, [2022-05-11T21:46:51.050634 #9800]  INFO -- : POST request is: {"id":"9","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:46:51.633159 #9800]  INFO -- : Response is: {"id":9,"petId":0,"quantity":0,"status":"available","complete":false}
+I, [2022-05-11T21:46:51.636579 #9800]  INFO -- : URL: https://petstore.swagger.io/v2/store/order/9
+I, [2022-05-11T21:46:52.241710 #9800]  INFO -- : Response is: {"code":200,"type":"unknown","message":"9"}
+I, [2022-05-11T21:46:52.244749 #9800]  INFO -- : URL: https://petstore.swagger.io/v2/store/order/9
+I, [2022-05-11T21:46:52.830766 #9800]  INFO -- : Response is: {"code":1,"type":"error","message":"Order not found"}
+I, [2022-05-11T21:46:52.832093 #9800]  INFO -- : ----- Test Case finish -----
+I, [2022-05-11T21:47:34.106380 #11040]  INFO -- : ----- Test Case start -----
+I, [2022-05-11T21:47:34.106835 #11040]  INFO -- : URL: https://petstore.swagger.io/v2/pet/findByStatus?status=pending
+I, [2022-05-11T21:47:34.733826 #11040]  INFO -- : ----- Test Case finish -----
+I, [2022-05-11T21:47:34.739829 #11040]  INFO -- : ----- Test Case start -----
+I, [2022-05-11T21:47:34.740289 #11040]  INFO -- : URL: https://petstore.swagger.io/v2/pet
+I, [2022-05-11T21:47:34.740655 #11040]  INFO -- : POST request is: {"id":"","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:47:35.357869 #11040]  INFO -- : Response is: {"id":9223372036854024385,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:47:35.361517 #11040]  INFO -- : URL: https://petstore.swagger.io/v2/pet/9223372036854024385
+I, [2022-05-11T21:47:35.981714 #11040]  INFO -- : Response is: {"id":9223372036854024385,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:47:35.984086 #11040]  INFO -- : ----- Test Case finish -----
+I, [2022-05-11T21:47:35.989924 #11040]  INFO -- : ----- Test Case start -----
+I, [2022-05-11T21:47:35.990234 #11040]  INFO -- : URL: https://petstore.swagger.io/v2/store/order
+I, [2022-05-11T21:47:35.990586 #11040]  INFO -- : POST request is: {"id":"5","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:47:36.602451 #11040]  INFO -- : Response is: {"id":5,"petId":0,"quantity":0,"status":"available","complete":false}
+I, [2022-05-11T21:47:36.605903 #11040]  INFO -- : URL: https://petstore.swagger.io/v2/store/order/5
+I, [2022-05-11T21:47:37.208053 #11040]  INFO -- : Response is: {"id":5,"petId":0,"quantity":0,"status":"available","complete":false}
+I, [2022-05-11T21:47:37.210972 #11040]  INFO -- : ----- Test Case finish -----
+I, [2022-05-11T21:47:37.216197 #11040]  INFO -- : ----- Test Case start -----
+I, [2022-05-11T21:47:37.216492 #11040]  INFO -- : URL: https://petstore.swagger.io/v2/pet
+I, [2022-05-11T21:47:37.216832 #11040]  INFO -- : POST request is: {"id":"5","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:47:37.801198 #11040]  INFO -- : Response is: {"id":5,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:47:37.804445 #11040]  INFO -- : URL: https://petstore.swagger.io/v2/pet
+I, [2022-05-11T21:47:37.804805 #11040]  INFO -- : PUT request is: {"id":"5","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"sold"}
+I, [2022-05-11T21:47:38.423915 #11040]  INFO -- : Response is: {"id":5,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"sold"}
+I, [2022-05-11T21:47:38.426420 #11040]  INFO -- : URL: https://petstore.swagger.io/v2/pet/5
+I, [2022-05-11T21:47:39.042846 #11040]  INFO -- : Response is: {"id":5,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"sold"}
+I, [2022-05-11T21:47:39.046639 #11040]  INFO -- : ----- Test Case finish -----
+I, [2022-05-11T21:47:39.052758 #11040]  INFO -- : ----- Test Case start -----
+I, [2022-05-11T21:47:39.053125 #11040]  INFO -- : URL: https://petstore.swagger.io/v2/pet
+I, [2022-05-11T21:47:39.053539 #11040]  INFO -- : POST request is: {"id":"5","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:47:39.663863 #11040]  INFO -- : Response is: {"id":5,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:47:39.667559 #11040]  INFO -- : URL: https://petstore.swagger.io/v2/pet/5
+I, [2022-05-11T21:47:40.256711 #11040]  INFO -- : Response is: {"code":200,"type":"unknown","message":"5"}
+I, [2022-05-11T21:47:40.259567 #11040]  INFO -- : URL: https://petstore.swagger.io/v2/pet/5
+I, [2022-05-11T21:47:40.848827 #11040]  INFO -- : Response is: {"code":1,"type":"error","message":"Pet not found"}
+I, [2022-05-11T21:47:40.850951 #11040]  INFO -- : ----- Test Case finish -----
+I, [2022-05-11T21:47:40.856748 #11040]  INFO -- : ----- Test Case start -----
+I, [2022-05-11T21:47:40.856991 #11040]  INFO -- : URL: https://petstore.swagger.io/v2/store/order
+I, [2022-05-11T21:47:40.857194 #11040]  INFO -- : POST request is: {"id":"5","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-11T21:47:41.471971 #11040]  INFO -- : Response is: {"id":5,"petId":0,"quantity":0,"status":"available","complete":false}
+I, [2022-05-11T21:47:41.475293 #11040]  INFO -- : URL: https://petstore.swagger.io/v2/store/order/5
+I, [2022-05-11T21:47:42.078965 #11040]  INFO -- : Response is: {"code":200,"type":"unknown","message":"5"}
+I, [2022-05-11T21:47:42.082014 #11040]  INFO -- : URL: https://petstore.swagger.io/v2/store/order/5
+I, [2022-05-11T21:47:42.656537 #11040]  INFO -- : Response is: {"code":1,"type":"error","message":"Order not found"}
+I, [2022-05-11T21:47:42.658752 #11040]  INFO -- : ----- Test Case finish -----
+I, [2022-05-13T16:16:18.738817 #14652]  INFO -- : URL: https://petstore.swagger.io/v2/pet/findByStatus?status=pending
+I, [2022-05-13T16:16:19.493957 #14652]  INFO -- : Response is: [{"id":31662904,"category":{"id":-72976378,"name":"consequat commodo dolor"},"name":"doggie","photoUrls":["dolor","aliquip"],"tags":[{"id":-81536039,"name":"officia non exercitation laborum"},{"id":-81700539,"name":"sed quis"}],"status":"pending"},{"id":5,"category":{"id":5,"name":"jimmy"},"name":"jimmy","photoUrls":[],"tags":[{"id":5,"name":"jimmy"}],"status":"pending"}]
+I, [2022-05-13T16:17:03.931765 #22308]  INFO -- : ----- Test Case start -----
+I, [2022-05-13T16:17:03.932297 #22308]  INFO -- : URL: https://petstore.swagger.io/v2/pet/findByStatus?status=pending
+I, [2022-05-13T16:17:04.586231 #22308]  INFO -- : Response is: [{"id":31662904,"category":{"id":-72976378,"name":"consequat commodo dolor"},"name":"doggie","photoUrls":["dolor","aliquip"],"tags":[{"id":-81536039,"name":"officia non exercitation laborum"},{"id":-81700539,"name":"sed quis"}],"status":"pending"},{"id":5,"category":{"id":5,"name":"jimmy"},"name":"jimmy","photoUrls":[],"tags":[{"id":5,"name":"jimmy"}],"status":"pending"}]
+I, [2022-05-13T16:17:04.597019 #22308]  INFO -- : ----- Test Case finish -----
+I, [2022-05-13T16:18:17.353130 #24996]  INFO -- : ----- Test Case start -----
+I, [2022-05-13T16:18:17.353658 #24996]  INFO -- : URL: https://petstore.swagger.io/v2/pet/findByStatus?status=pending
+I, [2022-05-13T16:18:18.131555 #24996]  INFO -- : Response is: [{"id":31662904,"category":{"id":-72976378,"name":"consequat commodo dolor"},"name":"doggie","photoUrls":["dolor","aliquip"],"tags":[{"id":-81536039,"name":"officia non exercitation laborum"},{"id":-81700539,"name":"sed quis"}],"status":"pending"},{"id":5,"category":{"id":5,"name":"jimmy"},"name":"jimmy","photoUrls":[],"tags":[{"id":5,"name":"jimmy"}],"status":"pending"}]
+I, [2022-05-13T16:18:18.141816 #24996]  INFO -- : ----- Test Case finish -----
+I, [2022-05-13T16:19:40.855391 #5180]  INFO -- : ----- Test Case start -----
+I, [2022-05-13T16:19:40.855874 #5180]  INFO -- : URL: https://petstore.swagger.io/v2/pet/findByStatus?status=pending
+I, [2022-05-13T16:19:41.579629 #5180]  INFO -- : Response is: [{"id":31662904,"category":{"id":-72976378,"name":"consequat commodo dolor"},"name":"doggie","photoUrls":["dolor","aliquip"],"tags":[{"id":-81536039,"name":"officia non exercitation laborum"},{"id":-81700539,"name":"sed quis"}],"status":"pending"},{"id":5,"category":{"id":5,"name":"jimmy"},"name":"jimmy","photoUrls":[],"tags":[{"id":5,"name":"jimmy"}],"status":"pending"}]
+I, [2022-05-13T16:19:41.590001 #5180]  INFO -- : ----- Test Case finish -----
+I, [2022-05-13T16:20:55.977471 #15576]  INFO -- : ----- Test Case start -----
+I, [2022-05-13T16:20:55.978028 #15576]  INFO -- : URL: https://petstore.swagger.io/v2/pet
+I, [2022-05-13T16:20:55.981617 #15576]  INFO -- : POST request is: {"id":"","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-13T16:20:56.699910 #15576]  INFO -- : Response is: {"id":9223372036854544251,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-13T16:20:56.709669 #15576]  INFO -- : URL: https://petstore.swagger.io/v2/pet/9223372036854544251
+I, [2022-05-13T16:20:57.319374 #15576]  INFO -- : Response is: {"id":9223372036854544251,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-13T16:20:57.321543 #15576]  INFO -- : ----- Test Case finish -----
+I, [2022-05-13T16:47:14.698710 #23704]  INFO -- : ----- Test Case start -----
+I, [2022-05-13T16:47:14.699288 #23704]  INFO -- : URL: https://petstore.swagger.io/v2/pet/findByStatus?status=pending
+I, [2022-05-13T16:47:15.404908 #23704]  INFO -- : Response is: [{"id":31662904,"category":{"id":-72976378,"name":"consequat commodo dolor"},"name":"doggie","photoUrls":["dolor","aliquip"],"tags":[{"id":-81536039,"name":"officia non exercitation laborum"},{"id":-81700539,"name":"sed quis"}],"status":"pending"}]
+I, [2022-05-13T16:47:15.414916 #23704]  INFO -- : ----- Test Case finish -----
+I, [2022-05-13T16:47:15.421551 #23704]  INFO -- : ----- Test Case start -----
+I, [2022-05-13T16:47:15.422298 #23704]  INFO -- : URL: https://petstore.swagger.io/v2/pet
+I, [2022-05-13T16:47:15.422902 #23704]  INFO -- : POST request is: {"id":"","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-13T16:47:16.026238 #23704]  INFO -- : Response is: {"id":9223372036854544648,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-13T16:47:16.031181 #23704]  INFO -- : URL: https://petstore.swagger.io/v2/pet/9223372036854544648
+I, [2022-05-13T16:47:16.649192 #23704]  INFO -- : Response is: {"id":9223372036854544648,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-13T16:47:16.651416 #23704]  INFO -- : ----- Test Case finish -----
+I, [2022-05-13T16:47:16.659294 #23704]  INFO -- : ----- Test Case start -----
+I, [2022-05-13T16:47:16.659711 #23704]  INFO -- : URL: https://petstore.swagger.io/v2/store/order
+I, [2022-05-13T16:47:16.660111 #23704]  INFO -- : POST request is: {"id":"2","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-13T16:47:17.268153 #23704]  INFO -- : Response is: {"id":2,"petId":0,"quantity":0,"status":"available","complete":false}
+I, [2022-05-13T16:47:17.271257 #23704]  INFO -- : URL: https://petstore.swagger.io/v2/store/order/2
+I, [2022-05-13T16:47:17.859119 #23704]  INFO -- : Response is: {"id":2,"petId":0,"quantity":0,"status":"available","complete":false}
+I, [2022-05-13T16:47:17.861830 #23704]  INFO -- : ----- Test Case finish -----
+I, [2022-05-13T16:47:17.868072 #23704]  INFO -- : ----- Test Case start -----
+I, [2022-05-13T16:47:17.868476 #23704]  INFO -- : URL: https://petstore.swagger.io/v2/pet
+I, [2022-05-13T16:47:17.868803 #23704]  INFO -- : POST request is: {"id":"2","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-13T16:47:18.478735 #23704]  INFO -- : Response is: {"id":2,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-13T16:47:18.481960 #23704]  INFO -- : URL: https://petstore.swagger.io/v2/pet
+I, [2022-05-13T16:47:18.482436 #23704]  INFO -- : PUT request is: {"id":"2","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"sold"}
+I, [2022-05-13T16:47:19.085028 #23704]  INFO -- : Response is: {"id":2,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"sold"}
+I, [2022-05-13T16:47:19.087948 #23704]  INFO -- : URL: https://petstore.swagger.io/v2/pet/2
+I, [2022-05-13T16:47:19.663012 #23704]  INFO -- : Response is: {"id":2,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"sold"}
+I, [2022-05-13T16:47:19.666509 #23704]  INFO -- : ----- Test Case finish -----
+I, [2022-05-13T16:47:19.674355 #23704]  INFO -- : ----- Test Case start -----
+I, [2022-05-13T16:47:19.674909 #23704]  INFO -- : URL: https://petstore.swagger.io/v2/pet
+I, [2022-05-13T16:47:19.675426 #23704]  INFO -- : POST request is: {"id":"2","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-13T16:47:20.284405 #23704]  INFO -- : Response is: {"id":2,"category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-13T16:47:20.287648 #23704]  INFO -- : URL: https://petstore.swagger.io/v2/pet/2
+I, [2022-05-13T16:47:20.888849 #23704]  INFO -- : Response is: {"code":200,"type":"unknown","message":"2"}
+I, [2022-05-13T16:47:20.892057 #23704]  INFO -- : URL: https://petstore.swagger.io/v2/pet/2
+I, [2022-05-13T16:47:21.496484 #23704]  INFO -- : Response is: {"code":1,"type":"error","message":"Pet not found"}
+I, [2022-05-13T16:47:21.498727 #23704]  INFO -- : ----- Test Case finish -----
+I, [2022-05-13T16:47:21.505047 #23704]  INFO -- : ----- Test Case start -----
+I, [2022-05-13T16:47:21.505384 #23704]  INFO -- : URL: https://petstore.swagger.io/v2/store/order
+I, [2022-05-13T16:47:21.505730 #23704]  INFO -- : POST request is: {"id":"2","category":{"id":0,"name":"test"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"pet"}],"status":"available"}
+I, [2022-05-13T16:47:22.118426 #23704]  INFO -- : Response is: {"id":2,"petId":0,"quantity":0,"status":"available","complete":false}
+I, [2022-05-13T16:47:22.122217 #23704]  INFO -- : URL: https://petstore.swagger.io/v2/store/order/2
+I, [2022-05-13T16:47:22.738705 #23704]  INFO -- : Response is: {"code":200,"type":"unknown","message":"2"}
+I, [2022-05-13T16:47:22.741744 #23704]  INFO -- : URL: https://petstore.swagger.io/v2/store/order/2
+I, [2022-05-13T16:47:23.359657 #23704]  INFO -- : Response is: {"code":1,"type":"error","message":"Order not found"}
+I, [2022-05-13T16:47:23.361765 #23704]  INFO -- : ----- Test Case finish -----

@@ -1,7 +1,12 @@
 Before do |scenario|
-  $logger.info('----- Test Case start -----')
+  default = Default.new
+  default.info('----- Test Case start -----')
 end
 
 After do |scenario|
-  $logger.info('----- Test Case finish -----')
+  default = Default.new
+  default.info('----- Test Case finish -----')
+  if scenario.failed?
+    # encoded_img = $driver.screenshot_as(:base64)
+  end
 end
