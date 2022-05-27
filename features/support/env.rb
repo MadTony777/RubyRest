@@ -4,9 +4,7 @@ require 'net/http'
 require 'httparty'
 require 'logger'
 
-$response = ''
-$id = ''
-$status = 'available'
-$statuses = ['available', 'pending', 'sold']
+
+$orderReqDir = 'features/step_definitions/requests/order.json'
+$petReqDir = 'features/step_definitions/requests/pet.json'
 $random = Random.rand(1...10)
-# $logger = Logger.new(STDOUT)

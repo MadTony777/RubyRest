@@ -4,6 +4,7 @@ source "https://rubygems.org"
 
 # gem "rails"
 source 'https://rubygems.org' do
+    gem 'rspec-rails'
     gem 'cucumber'
     gem 'httparty'
     gem 'json'

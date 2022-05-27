@@ -2,76 +2,108 @@
 Feature: pet store REST service testing
 
   @findByStatus
-  Scenario: finds pets by status
+  Scenario Outline: finds pets by status
 
-    Given Send "GET" to the "https://petstore.swagger.io/v2/pet/findByStatus?status=" with status "pending"
-    And Check that response code equals "200"
+    Given Send "GET" to the "https://petstore.swagger.io/v2/pet/findByStatus?status=" with "<Param>"
+    And Check that response code equals "<Code>"
     And Check that response valid
     And Check that there are no others statuses in response
 
+    Examples:
+      | Param     | Code |
+      | available | 200  |
+      | pending   | 200  |
+      | sold      | 200  |
+      | wrong     | 200  |
+
 
   @petPost
-  Scenario: add a new pet to the store
+  Scenario Outline: add a new pet to the store
 
-    Given Send "POST" to the "https://petstore.swagger.io/v2/pet" with status "available"
-    Then Check that response code equals "200"
+    Given Create "pet" with status "<Param>"
+    When Send "POST" to the "https://petstore.swagger.io/v2/pet" with "request"
+    Then Check that response code equals "<Code>"
     And Check that response valid
     And Get id from response
-    When Send "GET" to the "https://petstore.swagger.io/v2/pet/" with ID
-    Then Check that response code equals "200"
+    When Send "GET" to the "https://petstore.swagger.io/v2/pet/" with "id"
+    Then Check that response code equals "<Code>"
+    Then Compare "pet" request with response
+
+    Examples:
+      | Param     | Code |
+      | available | 200  |
+      | pending   | 200  |
+      | sold      | 200  |
+      | wrong     | 200  |
+
+
+  @petPut
+  Scenario Outline: update an existing pet
+
+    Given Create "pet" with status "<Param>"
+    When Send "POST" to the "https://petstore.swagger.io/v2/pet" with "request"
+    Then Check that response code equals "<Code>"
+    And Check that response valid
+    And Get id from response
+    When Update pet by changing status
+    Then Check that response code equals "<Code>"
+    And Check that response valid
+    When Send "GET" to the "https://petstore.swagger.io/v2/pet/" with "id"
+    Then Check that response code equals "<Code>"
+    And Check that response valid
+    And Check that response contains new status
+
+    Examples:
+      | Param     | Code |
+      | available | 200  |
+      | pending   | 200  |
+      | sold      | 200  |
+
+
+  @deletePet
+  Scenario Outline: deletes a pet
+
+    Given Create "pet" with status "<Param>"
+    When Send "POST" to the "https://petstore.swagger.io/v2/pet/" with "request"
+    Then Check that response code equals "<Code>"
+    And Check that response valid
+    And Get id from response
+    When Send "DELETE" to the "https://petstore.swagger.io/v2/pet/" with "id"
+    Then Check that response code equals "<Code>"
+    And Check that response valid
+    When Send "GET" to the "https://petstore.swagger.io/v2/pet/" with "id"
+    Then Check that response code equals "404"
+
+    Examples:
+      | Param     | Code |
+      | available | 200  |
+      | pending   | 200  |
+      | sold      | 200  |
 
 
   @order
   Scenario: place an order for a pet
 
-    Given Send create request to the "https://petstore.swagger.io/v2/store/order" url
+    Given Create "order" with status ""
+    When Send "POST" to the "https://petstore.swagger.io/v2/store/order" with "request"
     Then Check that response code equals "200"
     And Check that response valid
     And Get id from response
-    When Send "GET" to the "https://petstore.swagger.io/v2/store/order/" with ID
+    When Send "GET" to the "https://petstore.swagger.io/v2/store/order/" with "id"
     Then Check that response code equals "200"
-    And Check that response valid
-
-
-  @petPut
-  Scenario: update an existing pet
-
-    Given Send create request to the "https://petstore.swagger.io/v2/pet" url
-    Then Check that response code equals "200"
-    And Check that response valid
-    And Get id from response
-    When Send "PUT" to the "https://petstore.swagger.io/v2/pet" with ID
-    Then Check that response code equals "200"
-    And Check that response valid
-    When Send "GET" to the "https://petstore.swagger.io/v2/pet/" with ID
-    Then Check that response code equals "200"
-    And Check that response valid
-    And Check that response contains new status
-
-
-  @deletePet
-  Scenario: deletes a pet
-
-    Given Send create request to the "https://petstore.swagger.io/v2/pet" url
-    Then Check that response code equals "200"
-    And Check that response valid
-    And Get id from response
-    When Send "DELETE" to the "https://petstore.swagger.io/v2/pet/" with ID
-    Then Check that response code equals "200"
-    And Check that response valid
-    When Send "GET" to the "https://petstore.swagger.io/v2/pet/" with ID
-    Then Check that response code equals "404"
-
+    And Check that response valid    
+    Then Compare "order" request with response
 
 
   @deleteOrder
   Scenario: delete perchase order by id
-    Given Send create request to the "https://petstore.swagger.io/v2/store/order" url
+    Given Create "order" with status ""
+    When Send "POST" to the "https://petstore.swagger.io/v2/store/order" with "request"
     Then Check that response code equals "200"
     And Check that response valid
     And Get id from response
-    When Send "DELETE" to the "https://petstore.swagger.io/v2/store/order/" with ID
+    When Send "DELETE" to the "https://petstore.swagger.io/v2/store/order/" with "id"
     Then Check that response code equals "200"
     And Check that response valid
-    When Send "GET" to the "https://petstore.swagger.io/v2/store/order/" with ID
+    When Send "GET" to the "https://petstore.swagger.io/v2/store/order/" with "id"
     Then Check that response code equals "404"
