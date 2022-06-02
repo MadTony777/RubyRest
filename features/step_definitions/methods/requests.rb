@@ -33,18 +33,18 @@ class Requests
     rescue StandardError => e
       default.error "Error - #{e}"
     end    
-    default.info 'URL: ' + uri.to_s
-    default.info 'Response: ' + $response.to_s
+    # default.info 'URL: ' + uri.to_s
+    # default.info 'Response: ' + $response.to_s
     $response
   end
 
   def post_method_with_request(url, request)
     default = Default.new
     uri = URI(url)
-    default.info 'URL: ' + uri.to_s
-    default.info 'POST request: ' + request.to_s
+    # default.info 'URL: ' + uri.to_s
+    # default.info 'POST request: ' + request.to_s
     $response = HTTParty.post(uri, body: request.to_s, headers: { 'Content-Type' => 'application/json' })
-    default.info 'Response: ' + $response.to_s
+    # default.info 'Response: ' + $response.to_s
     $response
   end
 
@@ -52,7 +52,7 @@ class Requests
   def update_request(url,id, status)
     default = Default.new
     uri = URI(url)
-    default.info 'URL: ' + uri.to_s
+    # default.info 'URL: ' + uri.to_s
     array = ['available', 'pending', 'sold']
     array.delete(status)
     $newStatus = array.sample
@@ -60,12 +60,12 @@ class Requests
       request = JSON.parse(get_file(url))
       request = replace_status(request.to_json, $newStatus)
       request = replace_id(request, id)
-      default.info 'Update request: ' + request.to_s
+      # default.info 'Update request: ' + request.to_s
       $response = HTTParty.put(uri, body: request.to_s, headers: { 'Content-Type' => 'application/json' })
     rescue StandardError => e
       default.error "Error - #{e}"
     end
-    default.info 'Response is: ' + $response.to_s
+    # default.info 'Response is: ' + $response.to_s
     $response
   end
 

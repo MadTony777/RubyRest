@@ -1,6 +1,7 @@
 Before do |scenario|
   default = Default.new
-  default.info('*Scenario: ' + scenario.name)
+  # default.info('*Scenario: ' + scenario.name)
+  $name = scenario.name
   $scenario = scenario
   $step_index = 0
 end
@@ -8,7 +9,7 @@ end
 
 AfterStep do |result, test_step|
   default = Default.new
-  default.info(test_step.text + ' is PASSED')
+  default.info($name + '; ' + test_step.text + '; PASSED')
   $step_index += 2
 end
 
@@ -20,5 +21,5 @@ After do |scenario|
     err = scenario.exception.to_s
     default.error('ERROR in step "' + step + '" with message: ' + err.delete!("\r\n\\"))
   end
-  default.info('*Scenario end.')
+  # default.info('*Scenario end.')
 end

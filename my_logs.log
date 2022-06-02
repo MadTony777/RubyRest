@@ -1073,3 +1073,136 @@ I, [2022-05-25T15:01:02.103735 #18372]  INFO -- : ✓
 E, [2022-05-25T15:01:02.148782 #18372] ERROR -- :  Scenario failed!
 I, [2022-05-25T15:01:02.149255 #18372]  INFO -- :  Scenario end.
 I, [2022-05-26T15:28:45.245696 #17276]  INFO -- : *Scenario: place an order for a pet
+I, [2022-06-02T10:08:02.229723 #12476]  INFO -- : finds pets by status; Send "GET" to the "https://petstore.swagger.io/v2/pet/findByStatus?status=" with "available"; PASSED
+I, [2022-06-02T10:08:02.235773 #12476]  INFO -- : finds pets by status; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:02.237342 #12476]  INFO -- : finds pets by status; Check that response valid; PASSED
+I, [2022-06-02T10:08:02.239412 #12476]  INFO -- : finds pets by status; Check that there are no others statuses in response; PASSED
+I, [2022-06-02T10:08:02.934644 #12476]  INFO -- : finds pets by status; Send "GET" to the "https://petstore.swagger.io/v2/pet/findByStatus?status=" with "pending"; PASSED
+I, [2022-06-02T10:08:02.935245 #12476]  INFO -- : finds pets by status; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:02.935620 #12476]  INFO -- : finds pets by status; Check that response valid; PASSED
+I, [2022-06-02T10:08:02.936041 #12476]  INFO -- : finds pets by status; Check that there are no others statuses in response; PASSED
+I, [2022-06-02T10:08:03.555138 #12476]  INFO -- : finds pets by status; Send "GET" to the "https://petstore.swagger.io/v2/pet/findByStatus?status=" with "sold"; PASSED
+I, [2022-06-02T10:08:03.555501 #12476]  INFO -- : finds pets by status; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:03.557206 #12476]  INFO -- : finds pets by status; Check that response valid; PASSED
+I, [2022-06-02T10:08:03.557641 #12476]  INFO -- : finds pets by status; Check that there are no others statuses in response; PASSED
+I, [2022-06-02T10:08:04.174801 #12476]  INFO -- : finds pets by status; Send "GET" to the "https://petstore.swagger.io/v2/pet/findByStatus?status=" with "wrong"; PASSED
+I, [2022-06-02T10:08:04.175355 #12476]  INFO -- : finds pets by status; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:04.175766 #12476]  INFO -- : finds pets by status; Check that response valid; PASSED
+I, [2022-06-02T10:08:04.176233 #12476]  INFO -- : finds pets by status; Check that there are no others statuses in response; PASSED
+I, [2022-06-02T10:08:04.193061 #12476]  INFO -- : add a new pet to the store; Create "pet" with status "available"; PASSED
+I, [2022-06-02T10:08:04.814045 #12476]  INFO -- : add a new pet to the store; Send "POST" to the "https://petstore.swagger.io/v2/pet" with "request"; PASSED
+I, [2022-06-02T10:08:04.814545 #12476]  INFO -- : add a new pet to the store; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:04.814935 #12476]  INFO -- : add a new pet to the store; Check that response valid; PASSED
+I, [2022-06-02T10:08:04.815315 #12476]  INFO -- : add a new pet to the store; Get id from response; PASSED
+I, [2022-06-02T10:08:05.431171 #12476]  INFO -- : add a new pet to the store; Send "GET" to the "https://petstore.swagger.io/v2/pet/" with "id"; PASSED
+I, [2022-06-02T10:08:05.431540 #12476]  INFO -- : add a new pet to the store; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:05.431914 #12476]  INFO -- : add a new pet to the store; Compare "pet" request with response; PASSED
+I, [2022-06-02T10:08:05.437430 #12476]  INFO -- : add a new pet to the store; Create "pet" with status "pending"; PASSED
+I, [2022-06-02T10:08:06.047079 #12476]  INFO -- : add a new pet to the store; Send "POST" to the "https://petstore.swagger.io/v2/pet" with "request"; PASSED
+I, [2022-06-02T10:08:06.047420 #12476]  INFO -- : add a new pet to the store; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:06.047641 #12476]  INFO -- : add a new pet to the store; Check that response valid; PASSED
+I, [2022-06-02T10:08:06.047856 #12476]  INFO -- : add a new pet to the store; Get id from response; PASSED
+I, [2022-06-02T10:08:06.668670 #12476]  INFO -- : add a new pet to the store; Send "GET" to the "https://petstore.swagger.io/v2/pet/" with "id"; PASSED
+I, [2022-06-02T10:08:06.669049 #12476]  INFO -- : add a new pet to the store; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:06.669459 #12476]  INFO -- : add a new pet to the store; Compare "pet" request with response; PASSED
+I, [2022-06-02T10:08:06.675809 #12476]  INFO -- : add a new pet to the store; Create "pet" with status "sold"; PASSED
+I, [2022-06-02T10:08:07.318011 #12476]  INFO -- : add a new pet to the store; Send "POST" to the "https://petstore.swagger.io/v2/pet" with "request"; PASSED
+I, [2022-06-02T10:08:07.318477 #12476]  INFO -- : add a new pet to the store; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:07.318742 #12476]  INFO -- : add a new pet to the store; Check that response valid; PASSED
+I, [2022-06-02T10:08:07.319123 #12476]  INFO -- : add a new pet to the store; Get id from response; PASSED
+I, [2022-06-02T10:08:07.940976 #12476]  INFO -- : add a new pet to the store; Send "GET" to the "https://petstore.swagger.io/v2/pet/" with "id"; PASSED
+I, [2022-06-02T10:08:07.941437 #12476]  INFO -- : add a new pet to the store; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:07.941846 #12476]  INFO -- : add a new pet to the store; Compare "pet" request with response; PASSED
+I, [2022-06-02T10:08:07.947111 #12476]  INFO -- : add a new pet to the store; Create "pet" with status "wrong"; PASSED
+I, [2022-06-02T10:08:08.566515 #12476]  INFO -- : add a new pet to the store; Send "POST" to the "https://petstore.swagger.io/v2/pet" with "request"; PASSED
+I, [2022-06-02T10:08:08.566852 #12476]  INFO -- : add a new pet to the store; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:08.567294 #12476]  INFO -- : add a new pet to the store; Check that response valid; PASSED
+I, [2022-06-02T10:08:08.567537 #12476]  INFO -- : add a new pet to the store; Get id from response; PASSED
+I, [2022-06-02T10:08:09.190317 #12476]  INFO -- : add a new pet to the store; Send "GET" to the "https://petstore.swagger.io/v2/pet/" with "id"; PASSED
+I, [2022-06-02T10:08:09.190802 #12476]  INFO -- : add a new pet to the store; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:09.191175 #12476]  INFO -- : add a new pet to the store; Compare "pet" request with response; PASSED
+I, [2022-06-02T10:08:09.207309 #12476]  INFO -- : update an existing pet; Create "pet" with status "available"; PASSED
+I, [2022-06-02T10:08:09.830122 #12476]  INFO -- : update an existing pet; Send "POST" to the "https://petstore.swagger.io/v2/pet" with "request"; PASSED
+I, [2022-06-02T10:08:09.830703 #12476]  INFO -- : update an existing pet; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:09.831148 #12476]  INFO -- : update an existing pet; Check that response valid; PASSED
+I, [2022-06-02T10:08:09.831514 #12476]  INFO -- : update an existing pet; Get id from response; PASSED
+I, [2022-06-02T10:08:10.465574 #12476]  INFO -- : update an existing pet; Update pet by changing status; PASSED
+I, [2022-06-02T10:08:10.466019 #12476]  INFO -- : update an existing pet; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:10.466410 #12476]  INFO -- : update an existing pet; Check that response valid; PASSED
+I, [2022-06-02T10:08:11.083977 #12476]  INFO -- : update an existing pet; Send "GET" to the "https://petstore.swagger.io/v2/pet/" with "id"; PASSED
+I, [2022-06-02T10:08:11.085338 #12476]  INFO -- : update an existing pet; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:11.085833 #12476]  INFO -- : update an existing pet; Check that response valid; PASSED
+I, [2022-06-02T10:08:11.086122 #12476]  INFO -- : update an existing pet; Check that response contains new status; PASSED
+I, [2022-06-02T10:08:11.091556 #12476]  INFO -- : update an existing pet; Create "pet" with status "pending"; PASSED
+I, [2022-06-02T10:08:11.722883 #12476]  INFO -- : update an existing pet; Send "POST" to the "https://petstore.swagger.io/v2/pet" with "request"; PASSED
+I, [2022-06-02T10:08:11.723343 #12476]  INFO -- : update an existing pet; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:11.723785 #12476]  INFO -- : update an existing pet; Check that response valid; PASSED
+I, [2022-06-02T10:08:11.724256 #12476]  INFO -- : update an existing pet; Get id from response; PASSED
+I, [2022-06-02T10:08:12.345786 #12476]  INFO -- : update an existing pet; Update pet by changing status; PASSED
+I, [2022-06-02T10:08:12.346309 #12476]  INFO -- : update an existing pet; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:12.346711 #12476]  INFO -- : update an existing pet; Check that response valid; PASSED
+I, [2022-06-02T10:08:12.950394 #12476]  INFO -- : update an existing pet; Send "GET" to the "https://petstore.swagger.io/v2/pet/" with "id"; PASSED
+I, [2022-06-02T10:08:12.950954 #12476]  INFO -- : update an existing pet; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:12.951368 #12476]  INFO -- : update an existing pet; Check that response valid; PASSED
+I, [2022-06-02T10:08:12.951830 #12476]  INFO -- : update an existing pet; Check that response contains new status; PASSED
+I, [2022-06-02T10:08:12.959605 #12476]  INFO -- : update an existing pet; Create "pet" with status "sold"; PASSED
+I, [2022-06-02T10:08:13.570210 #12476]  INFO -- : update an existing pet; Send "POST" to the "https://petstore.swagger.io/v2/pet" with "request"; PASSED
+I, [2022-06-02T10:08:13.570834 #12476]  INFO -- : update an existing pet; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:13.571206 #12476]  INFO -- : update an existing pet; Check that response valid; PASSED
+I, [2022-06-02T10:08:13.571569 #12476]  INFO -- : update an existing pet; Get id from response; PASSED
+I, [2022-06-02T10:08:14.192421 #12476]  INFO -- : update an existing pet; Update pet by changing status; PASSED
+I, [2022-06-02T10:08:14.192773 #12476]  INFO -- : update an existing pet; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:14.193020 #12476]  INFO -- : update an existing pet; Check that response valid; PASSED
+I, [2022-06-02T10:08:14.814669 #12476]  INFO -- : update an existing pet; Send "GET" to the "https://petstore.swagger.io/v2/pet/" with "id"; PASSED
+I, [2022-06-02T10:08:14.815128 #12476]  INFO -- : update an existing pet; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:14.815554 #12476]  INFO -- : update an existing pet; Check that response valid; PASSED
+I, [2022-06-02T10:08:14.816052 #12476]  INFO -- : update an existing pet; Check that response contains new status; PASSED
+I, [2022-06-02T10:08:14.826784 #12476]  INFO -- : deletes a pet; Create "pet" with status "available"; PASSED
+I, [2022-06-02T10:08:15.437625 #12476]  INFO -- : deletes a pet; Send "POST" to the "https://petstore.swagger.io/v2/pet/" with "request"; PASSED
+I, [2022-06-02T10:08:15.438110 #12476]  INFO -- : deletes a pet; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:15.438481 #12476]  INFO -- : deletes a pet; Check that response valid; PASSED
+I, [2022-06-02T10:08:15.438934 #12476]  INFO -- : deletes a pet; Get id from response; PASSED
+I, [2022-06-02T10:08:16.070490 #12476]  INFO -- : deletes a pet; Send "DELETE" to the "https://petstore.swagger.io/v2/pet/" with "id"; PASSED
+I, [2022-06-02T10:08:16.070986 #12476]  INFO -- : deletes a pet; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:16.071344 #12476]  INFO -- : deletes a pet; Check that response valid; PASSED
+I, [2022-06-02T10:08:16.692572 #12476]  INFO -- : deletes a pet; Send "GET" to the "https://petstore.swagger.io/v2/pet/" with "id"; PASSED
+I, [2022-06-02T10:08:16.693042 #12476]  INFO -- : deletes a pet; Check that response code equals "404"; PASSED
+I, [2022-06-02T10:08:16.699154 #12476]  INFO -- : deletes a pet; Create "pet" with status "pending"; PASSED
+I, [2022-06-02T10:08:17.311838 #12476]  INFO -- : deletes a pet; Send "POST" to the "https://petstore.swagger.io/v2/pet/" with "request"; PASSED
+I, [2022-06-02T10:08:17.312263 #12476]  INFO -- : deletes a pet; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:17.312769 #12476]  INFO -- : deletes a pet; Check that response valid; PASSED
+I, [2022-06-02T10:08:17.313286 #12476]  INFO -- : deletes a pet; Get id from response; PASSED
+I, [2022-06-02T10:08:17.932690 #12476]  INFO -- : deletes a pet; Send "DELETE" to the "https://petstore.swagger.io/v2/pet/" with "id"; PASSED
+I, [2022-06-02T10:08:17.933186 #12476]  INFO -- : deletes a pet; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:17.933562 #12476]  INFO -- : deletes a pet; Check that response valid; PASSED
+I, [2022-06-02T10:08:18.555730 #12476]  INFO -- : deletes a pet; Send "GET" to the "https://petstore.swagger.io/v2/pet/" with "id"; PASSED
+I, [2022-06-02T10:08:18.556226 #12476]  INFO -- : deletes a pet; Check that response code equals "404"; PASSED
+I, [2022-06-02T10:08:18.562328 #12476]  INFO -- : deletes a pet; Create "pet" with status "sold"; PASSED
+I, [2022-06-02T10:08:19.195246 #12476]  INFO -- : deletes a pet; Send "POST" to the "https://petstore.swagger.io/v2/pet/" with "request"; PASSED
+I, [2022-06-02T10:08:19.195964 #12476]  INFO -- : deletes a pet; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:19.196388 #12476]  INFO -- : deletes a pet; Check that response valid; PASSED
+I, [2022-06-02T10:08:19.196812 #12476]  INFO -- : deletes a pet; Get id from response; PASSED
+I, [2022-06-02T10:08:19.817232 #12476]  INFO -- : deletes a pet; Send "DELETE" to the "https://petstore.swagger.io/v2/pet/" with "id"; PASSED
+I, [2022-06-02T10:08:19.817681 #12476]  INFO -- : deletes a pet; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:19.817985 #12476]  INFO -- : deletes a pet; Check that response valid; PASSED
+I, [2022-06-02T10:08:20.424631 #12476]  INFO -- : deletes a pet; Send "GET" to the "https://petstore.swagger.io/v2/pet/" with "id"; PASSED
+I, [2022-06-02T10:08:20.425196 #12476]  INFO -- : deletes a pet; Check that response code equals "404"; PASSED
+I, [2022-06-02T10:08:20.432837 #12476]  INFO -- : place an order for a pet; Create "order" with status ""; PASSED
+I, [2022-06-02T10:08:21.050923 #12476]  INFO -- : place an order for a pet; Send "POST" to the "https://petstore.swagger.io/v2/store/order" with "request"; PASSED
+I, [2022-06-02T10:08:21.052293 #12476]  INFO -- : place an order for a pet; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:21.053232 #12476]  INFO -- : place an order for a pet; Check that response valid; PASSED
+I, [2022-06-02T10:08:21.054076 #12476]  INFO -- : place an order for a pet; Get id from response; PASSED
+I, [2022-06-02T10:08:21.678555 #12476]  INFO -- : place an order for a pet; Send "GET" to the "https://petstore.swagger.io/v2/store/order/" with "id"; PASSED
+I, [2022-06-02T10:08:21.679572 #12476]  INFO -- : place an order for a pet; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:21.680574 #12476]  INFO -- : place an order for a pet; Check that response valid; PASSED
+I, [2022-06-02T10:08:21.681501 #12476]  INFO -- : place an order for a pet; Compare "order" request with response; PASSED
+I, [2022-06-02T10:08:21.690652 #12476]  INFO -- : delete perchase order by id; Create "order" with status ""; PASSED
+I, [2022-06-02T10:08:22.302418 #12476]  INFO -- : delete perchase order by id; Send "POST" to the "https://petstore.swagger.io/v2/store/order" with "request"; PASSED
+I, [2022-06-02T10:08:22.303301 #12476]  INFO -- : delete perchase order by id; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:22.304120 #12476]  INFO -- : delete perchase order by id; Check that response valid; PASSED
+I, [2022-06-02T10:08:22.305275 #12476]  INFO -- : delete perchase order by id; Get id from response; PASSED
+I, [2022-06-02T10:08:22.926541 #12476]  INFO -- : delete perchase order by id; Send "DELETE" to the "https://petstore.swagger.io/v2/store/order/" with "id"; PASSED
+I, [2022-06-02T10:08:22.927608 #12476]  INFO -- : delete perchase order by id; Check that response code equals "200"; PASSED
+I, [2022-06-02T10:08:22.928809 #12476]  INFO -- : delete perchase order by id; Check that response valid; PASSED
+I, [2022-06-02T10:08:23.551687 #12476]  INFO -- : delete perchase order by id; Send "GET" to the "https://petstore.swagger.io/v2/store/order/" with "id"; PASSED
+I, [2022-06-02T10:08:23.552767 #12476]  INFO -- : delete perchase order by id; Check that response code equals "404"; PASSED
